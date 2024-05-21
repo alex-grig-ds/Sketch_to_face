@@ -3,7 +3,7 @@ sketch_weights: ./weights/10_model.pth
 sg_weight_path: ./weights/stylegan2-ffhq-256x256.pkl
 mapper_pretrained_weights: ./weights/mapper_weights.pth
 checkpoint_folder: checkpoints
-output_folder: 'output'
+output_folder: output
 
 # Training
 continue_training: True

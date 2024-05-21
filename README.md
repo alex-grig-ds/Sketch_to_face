@@ -16,3 +16,4 @@ Before launching:
 4. [Load pretrained sketch_mapper weights to 'weights' folder](https://cloud.mail.ru/public/SwT2/prcJWRFe5)
 5. Check params in config.yaml
 
+
