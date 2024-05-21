@@ -16,6 +16,7 @@ from src.stylegan2_ada.torch_utils import persistence
 
 def download_stylegan2_ffhq_256(weights_path: Path, device):
     if not weights_path.is_file():
+        weights_path.parent.mkdir(exist_ok=True, parents=True)
         logger.info('stylegan2-ffhq-256 model not found, downloading...')
         os.system("wget --content-disposition 'https://api.ngc.nvidia.com/v2/models/org/nvidia/team/research/stylegan2/1/files?redirect=true&path=stylegan2-ffhq-256x256.pkl' -O stylegan2-ffhq-256x256.pkl")
         os.rename('stylegan2-ffhq-256x256.pkl', str(weights_path))
