@@ -11,10 +11,10 @@ class FaceDataSet(Dataset):
     def __init__(self,
                  stylegan_generator: nn.Module,
                  device: torch.device,
+                 seed: int,
                  z_dim: int = 512,
                  dataset_size: int = 300,
                  random_epoch: bool = False,  # Если True, то каждую эпоху генерируются новые данные
-                 seed: int = 345
     ):
         super().__init__()
         self.stylegan_generator = stylegan_generator

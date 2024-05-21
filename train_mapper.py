@@ -50,8 +50,8 @@ def train_loop(config: dict):
     mapper_model.train()
 
     logger.info("Prepare datasets.")
-    train_data = FaceDataSet(stylegan_generator, device, random_epoch=True, dataset_size=config['train_dataset_size'])
-    test_data = FaceDataSet(stylegan_generator, device, random_epoch=False, dataset_size=config['valid_dataset_size'])
+    train_data = FaceDataSet(stylegan_generator, device, random_epoch=True, dataset_size=config['train_dataset_size'], seed=123)
+    test_data = FaceDataSet(stylegan_generator, device, random_epoch=False, dataset_size=config['valid_dataset_size'], seed=345)
     train_loader = DataLoader(dataset=train_data, batch_size=config['batch_size'])
     test_loader = DataLoader(dataset=test_data, batch_size=config['batch_size'])
 
